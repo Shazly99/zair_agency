@@ -54,7 +54,14 @@
 	border:none;
 	outline:none;
 }
-
+.header{
+	font-size: 20px !important;
+	font-weight: 900 !important;
+}
+.sub__header{
+	font-size: 15px ;
+	line-height: 0.5;
+}
 /*** 
 
 ====================================================================
@@ -1466,7 +1473,7 @@ ul,li{
 	position:relative;
 	font-size:13px;
 	margin-bottom:10px;
-	color:#00aeff;
+	color:#0d6993;
 	font-family:'Montserrat',sans-serif;
 }
 

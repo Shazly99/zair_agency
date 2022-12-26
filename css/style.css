@@ -81,7 +81,13 @@ a{
 	cursor:pointer;
 	color:#00aeff;
 }
-
+.header{
+	font-size: 23px !important;
+	font-weight: 900 !important;
+}
+.sub__header{
+	font-size: 15px ; 
+}
 a:hover,a:focus,a:visited{
 	text-decoration:none;
 	outline:none;
@@ -1466,7 +1472,8 @@ ul,li{
 	position:relative;
 	font-size:13px;
 	margin-bottom:10px;
-	color:#00aeff;
+	color:#0d6993;
+
 	font-family:'Montserrat',sans-serif;
 }
 
