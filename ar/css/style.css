@@ -2375,8 +2375,7 @@ ul,li{
 }
 
 .footer-upper .social-links a:hover{
-	color:#ffffff;
-	background:#11c3f0;	
+	/* color:#ffffff;  */
 }
 
 .footer-upper .recent-posts-widget .post .fa{
