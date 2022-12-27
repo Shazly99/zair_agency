@@ -707,9 +707,9 @@ ul,li{
 	background-color:#3b5998;	
 }
 
-.social-links-one a.twitter:hover{
-	background-color:#00aced;	
-}
+/* .social-links-one a.twitter:hover{ */
+	/* background-color:#00aced;	 */
+/* } */
 
 .social-links-one a.google-plus:hover{
 	background-color:#dd4b39;	
