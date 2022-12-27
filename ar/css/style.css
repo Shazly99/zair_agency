@@ -417,6 +417,7 @@ ul,li{
 	text-align:center;
 	line-height:40px;
 	background:rgba(255,255,255,0.30);
+
 	transition:all 300ms ease;
 	-webkit-transition:all 300ms ease;
 	-ms-transition:all 300ms ease;
@@ -1228,7 +1229,7 @@ ul,li{
 
 .circle-icon-column:hover .inner-box .icon{
 	color:#ffffff;
-	background:#00aeff;
+	/* background:#00aeff; */
 	border-color:#00aeff;	
 }
 

@@ -1228,7 +1228,7 @@ ul,li{
 
 .circle-icon-column:hover .inner-box .icon{
 	color:#ffffff;
-	background:#00aeff;
+	/* background:#00aeff; */
 	border-color:#00aeff;	
 }
 
