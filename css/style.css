@@ -2297,9 +2297,9 @@ ul,li{
 .footer-upper .column h2{
 	position:relative;
 	font-size:16px;
-	line-height:1.4em;
-	padding:0px 0px 18px;
-	margin-bottom:25px;
+	/* line-height:1.4em; */
+	/* padding:0px 0px 18px; */
+	/* margin-bottom:25px; */
 	font-weight:600;
 	text-transform:capitalize;
 	letter-spacing:1px;
@@ -2307,13 +2307,13 @@ ul,li{
 }
 
 .footer-upper .column h2:after{
-	content:'';
-	position:absolute;
-	left:0px;
-	bottom:0px;
-	width:50px;
-	height:2px;
-	background:#11c3f0;
+	/* content:''; */
+	/* position:absolute; */
+	/* left:0px; */
+	/* bottom:0px; */
+	/* width:50px; */
+	/* height:2px; */
+	/* background:#11c3f0; */
 }
 
 .main-footer .about-widget{
