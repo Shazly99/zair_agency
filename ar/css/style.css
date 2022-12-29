@@ -1301,7 +1301,7 @@ ul,li{
 	content:'';
 	position:absolute;
 	display:block;
-	left:21px;
+	right:21px;
 	top:20px;
 	width:1px;
 	height:100%;
@@ -1326,7 +1326,7 @@ ul,li{
 
 .accordion-box.style-one .accordion .acc-btn .toggle-icon{
 	position:absolute;
-	left:0px;
+	right:0px;
 	top:-5px;
 	display:block;
 	width:42px;
@@ -2885,7 +2885,8 @@ ul,li{
 	top:0px;
 	width:100%;
 	height:100%;
-	background-color:#00aeff;
+	background-color:#464646;
+	
 	opacity:0.85;
 }
 
