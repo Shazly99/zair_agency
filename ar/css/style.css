@@ -1311,7 +1311,11 @@ ul,li{
 .accordion-box.style-one .accordion:last-child:before{
 	display:none;	
 }
-
+.navigation li {
+	font-weight: 900;
+	font-size: 20px ;
+	/* background-color: red; */
+}
 .accordion-box.style-one .accordion .acc-btn{
 	position:relative;
 	font-size:14px;
