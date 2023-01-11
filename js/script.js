@@ -373,3 +373,78 @@
 	
 
 })(window.jQuery);
+
+
+
+// blog get data
+(async function () {
+    let response = await fetch("https://zariontime.com/api/web/home")
+    let responseData = await response.json();
+    Blogs = responseData.Blogs;
+    displayBlogEn();
+    console.log(Blogs);
+    if (Blogs.length === 0) {
+        console.log('فاضي');
+        document.getElementById("blog").classList.add("d-none");
+        document.getElementById("navBlog").classList.add("d-none");
+    }else{
+        
+        console.log('مليان');
+        document.getElementById("blog").classList.add("d-block");
+        document.getElementById("navBlog").classList.add("d-block");
+    }
+})();
+
+function displayBlogEn() {
+    var cartona = ``;
+    for (var i = 0; i < Blogs.length; i++) {
+        cartona += `
+        <div class="app__blog col-md-4 mb-3 p-2 position-relative ">
+            <div   class="w-100 bg-blog rounded-3 overflow-hidden  p-3 ">
+            <a target="_blank" href="blogsDetailes.html?id=${Blogs[i].IDBlog}">
+                 <img class="blog-img w-100" src="${Blogs[i].BlogImage}">
+            </a>
+                 <h3 class='mt-3 app__blog-h3'>${Blogs[i].BlogTitleEn}</h3>
+                <div class="app__Blog-footer " style="display: flex !important; justify-content: space-between !important; align-items: center; flex-direction: row;">
+                    <div class="app__Blog-footer-right ">
+                        <i class="fa fa-user"></i>
+                        <span class='mt-3 blogAuthor' >${Blogs[i].BlogAuthorEn}</span>
+                    </div>
+                    <div class="app__Blog-footer-left">
+                        <span>${Blogs[i].BlogDate}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `
+    }
+    document.getElementById("rowData").innerHTML = cartona;
+}
+
+function displayBlogAr() {
+    var cartona = ``;
+
+    for (var i = 0; i < Blogs.length; i++) {
+        cartona += `
+        <div class="app__blog col-md-4 mb-3 p-2 position-relative ">
+            <div class="w-100 bg-blog rounded-3 overflow-hidden  p-3 ">
+            <a href="blogsDetailes.html?id=${Blogs[i].IDBlog}" target="_blank">
+                 <img class="blog-img w-100" src="${Blogs[i].BlogImage}">
+            </a>
+                <h3 class='mt-3 app__blog-h3'>${Blogs[i].BlogTitleAr}</h3>
+                <div class="app__Blog-footer">
+                    <div class="app__Blog-footer-right ">
+                        <i class="fa fa-user"></i>
+                        <span class='mt-3 blogAuthor' >${Blogs[i].BlogAuthorAr}</span>
+                    </div>
+                    <div class="app__Blog-footer-left">
+                        <span>${Blogs[i].BlogDate}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `
+    }
+    document.getElementById("rowData").innerHTML = cartona;
+}
+ 
