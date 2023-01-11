@@ -4473,4 +4473,9 @@ ul,li{
     color: #4A4A4A;
 }
 
- 
+ .contact-btn{ 
+	padding: 20px !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ }

@@ -229,65 +229,45 @@
 
                     <!-- Contact Form -->
 
-                        <div class="contact-us">
-
-                            <div class="form-container">
-                                <form method="post" action="sendemail.php"
-                                    id="contact-form-one">
-
-                                    <div class="row clearfix">
-                                        <div class="form-group col-lg-3 col-md-6
-                                            col-xs-12">
-                                            <div class="field-label">Name <span
-                                                    class="req">*</span></div>
-                                            <input type="text" name="username"
-                                                value="" placeholder="Your Name">
-                                        </div>
-
-                                        <div class="form-group col-lg-3 col-md-6
-                                            col-xs-12">
-                                            <div class="field-label">Email ddress
-                                                <span class="req">*</span></div>
-                                            <input type="email" name="email"
-                                                value="" placeholder="Your Email">
-                                        </div>
-
-                                        <div class="form-group col-lg-3 col-md-6
-                                            col-xs-12">
-                                            <div class="field-label">Phone <span
-                                                    class="req">*</span></div>
-                                            <input type="text" name="phone" value=""
-                                                placeholder="Phone">
-                                        </div>
-
-
-                                        <div class="form-group col-lg-3 col-md-6
-                                            col-xs-12">
-                                            <div class="field-label">Your business
-                                                <span class="req">*</span></div>
-                                            <input type="text" name="subject"
-                                                value="" placeholder="Your business">
-                                        </div>
-
-                                        <div class="form-group col-lg-12 col-sm-12
-                                            col-xs-12">
-                                            <div class="field-label">Message <span
-                                                    class="req">*</span></div>
-                                            <textarea name="message"
-                                                placeholder="Your Message"></textarea>
-                                        </div>
-
-                                        <div class="form-group col-md-12 col-xs-12">
-                                            <div class="text-right"><button
-                                                    type="submit" name="submit"
-                                                    class="theme-btn
-                                                    rounded-btn-blue">Send Message</button></div>
-                                        </div>
-
-                                    </div>
-                                </form>
-                            </div>
+    <!-- contact us section last update -->
+    <section id="contact" class="contact  p-5  ">
+        <div class="container  py-5">
+            <div class="main-title text-center py-4"> 
+                <h2 class="fw-bold fs-1 main__title-h2"></h2>
+            </div> 
+            <form  onsubmit="sendMessage(); reset(); return false" class="contact-screenshots  ">
+                        <div  class="mb-3">
+                            <label for="label__name" class="form-label label__name ">Name</label>
+                            <input type="text" name="" id="label__name" class="form-control bg-dark" placeholder="" aria-describedby="helpId">
                         </div>
+    
+                        <div class="mb-3">
+                            <label for="label__phone" class="form-label label__phone">Phone</label>
+                            <input type="number" name="" id="label__phone" class="form-control bg-dark" placeholder="" aria-describedby="helpId">
+                        </div>
+    
+                        <div class="mb-3">
+                            <label for="label__email" class="form-label label__email">Email</label>
+                            <input type="email" name="" id="label__email" class="form-control bg-dark" placeholder="" aria-describedby="helpId">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="label__company" class="form-label label__company">YOUR BUSINESS</label>
+                            <input type="text" name="" id="label__company" class="form-control bg-dark" placeholder="" aria-describedby="helpId">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="label__message" class="form-label label__message">Message</label>
+                            <textarea   class="form-control bg-dark text-light" style="resize: none;" id="label__message" rows="5"></textarea>
+                        </div>
+                        
+                        <div class="contact-btn">
+                            <button  type='submit'  class="m-auto  btn btn-info btn__message">Send Message</button>
+                        </div>
+                </form>
+        </div>
+    </section>
+
 
                 </div>
             </section>

@@ -447,3 +447,73 @@ function displayBlogAr() {
     document.getElementById("rowData1").innerHTML = cartona;
 }
  
+
+
+/** contact us send message */
+let userName = document.getElementById('label__name');
+let phone = document.getElementById('label__phone');
+let email = document.getElementById('label__email');
+let companyname = document.getElementById('label__company');
+let message = document.getElementById('label__message');
+
+async function sendMessage() {
+    console.log('test');
+    if (usernameValidation() == true && compVali() == true && phoneVali() == true && emailVali() == true) {
+        let data = {
+            MessageName: userName.value,
+            Message: email.value,
+            MessagePhone: phone.value,
+            MessageSubject: companyname.value,
+            MessageText: message.value,
+            // MessageSource: "ONTIME",
+        }
+
+        let response = await fetch("https://zarimain.online/messages/public/api/message", {
+            method: "POST",
+            body: data
+        }).then(res => {
+            console.log(res);
+            if (res.status == 200) {
+                alert('The message has been sent successfully!')
+            } else {
+                alert('Oops samting wrang!')
+            }
+        });
+        console.log(response);
+    } else {
+        alert(' Please enter all data  ')
+    }
+
+}
+function usernameValidation() {
+    if (userName.value != "") {
+        return true;
+    }
+    else {
+        return false
+    }
+}
+function phoneVali() {
+    if (phone.value != "") {
+        return true;
+    }
+    else {
+        return false
+    }
+}
+function emailVali() {
+    if (email.value != "") {
+        return true;
+    }
+    else {
+        return false
+    }
+}
+function compVali() {
+    if (companyname.value != "") {
+        return true;
+    }
+    else {
+        return false
+    }
+}
