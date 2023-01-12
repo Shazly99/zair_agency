@@ -456,36 +456,27 @@ let phone = document.getElementById('label__phone');
 let email = document.getElementById('label__email');
 let companyname = document.getElementById('label__company');
 let message = document.getElementById('label__message');
-
-async function sendMessage() {
-    console.log('test');
-    if (usernameValidation() == true && compVali() == true && phoneVali() == true && emailVali() == true) {
-        let data = {
-            MessageName: userName.value,
-            MessageEmail: email.value,
-            MessagePhone: phone.value,
-            MessageSubject: companyname.value,
-            MessageText: message.value,
-            MessageSource: "ONTIME",
-        }
-
-        let response = await fetch("https://zarimain.online/messages/public/api/message", {
-            method: "POST",
-            body: data
-        }).then(res => {
-            console.log(res);
-            if (res.status == 200) {
-                alert('The message has been sent successfully!')
-            } else {
-                alert('Oops samting wrang!')
-            }
-        });
-        console.log(response);
-    } else {
-        alert(' Please enter all data  ')
-    }
-
-}
+ 
+	async function sendMessage() {
+		$.ajax({
+		   url: "https://zarimain.online/messages/public/api/message",
+		   method: 'post',
+		   data: {
+			   MessageName: userName.value,
+			   MessageEmail: email.value,
+			   MessagePhone: phone.value,
+			   MessageSubject: companyname.value,
+			   MessageText: message.value,
+			   MessageSource: "AGENCY",
+		   },
+		   success: function (result) {
+			   alert(result.MessageAr);
+		   }
+	   });
+   
+   
+   }
+ 
 function usernameValidation() {
     if (userName.value != "") {
         return true;
@@ -518,3 +509,5 @@ function compVali() {
         return false
     }
 }
+
+
