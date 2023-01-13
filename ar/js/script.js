@@ -377,9 +377,10 @@
 
 // blog get data
 (async function () {
-    let response = await fetch("https://zariontime.com/api/web/home")
+    let response = await fetch("https://zariagency.com/test/public/api/blog/list")
     let responseData = await response.json();
     Blogs = responseData.Blogs;
+	console.log(Blogs);
     displayBlogAr();
     console.log(Blogs);
     if (Blogs.length === 0) {
@@ -403,11 +404,11 @@ function displayBlogEn() {
             <a target="_blank" href="blogsDetailes.html?id=${Blogs[i].IDBlog}">
                  <img class="blog-img w-100" src="${Blogs[i].BlogImage}">
             </a>
-                 <h3 class='mt-3 app__blog-h3'>${Blogs[i].BlogTitleAr}</h3>
+                 <h3 class='mt-3 app__blog-h3'>${Blogs[i].BlogTitle}</h3>
                 <div class="app__Blog-footer " style="display: flex !important; justify-content: space-between !important; align-items: center; flex-direction: row;">
                     <div class="app__Blog-footer-right ">
                         <i class="fa fa-user"></i>
-                        <span class='mt-3 blogAuthor' >${Blogs[i].BlogAuthorAr}</span>
+                        <span class='mt-3 blogAuthor' >${Blogs[i].BlogAuthor}</span>
                     </div>
                     <div class="app__Blog-footer-left">
                         <span>${Blogs[i].BlogDate}</span>
@@ -425,16 +426,16 @@ function displayBlogAr() {
 
     for (var i = 0; i < Blogs.length; i++) {
         cartona += `
-        <div class="app__blog col-md-4 mb-3 p-2 position-relative " dir='rtl'>
+        <div class="app__blog col-md-4 mb-3 p-2 position-relative "  >
             <div class="w-100 bg-blog rounded-3 overflow-hidden  p-3 ">
             <a href="blogsDetailes.html?id=${Blogs[i].IDBlog}" target="_blank">
                  <img class="blog-img w-100" src="${Blogs[i].BlogImage}">
             </a>
-                <h3 class='mt-3 app__blog-h3'>${Blogs[i].BlogTitleAr}</h3>
+                <h3 class='mt-3 app__blog-h3'>${Blogs[i].BlogTitle}</h3>
                 <div class="app__Blog-footer" style="display: flex !important; justify-content: space-between !important; align-items: center; flex-direction: row;">
                     <div class="app__Blog-footer-right ">
                         <i class="fa fa-user"></i>
-                        <span class='mt-3 blogAuthor' >${Blogs[i].BlogAuthorAr}</span>
+                        <span class='mt-3 blogAuthor' >${Blogs[i].BlogAuthor}</span>
                     </div>
                     <div class="app__Blog-footer-left">
                         <span class="BlogDate">${Blogs[i].BlogDate}</span>
@@ -445,9 +446,7 @@ function displayBlogAr() {
     `
     }
     document.getElementById("rowData1").innerHTML = cartona;
-}
- 
-
+} 
 
 /** contact us send message */
 let userName = document.getElementById('label__name');

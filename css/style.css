@@ -4421,7 +4421,8 @@ ul,li{
 }
 
 .bg-blog{
-	background-color: #ddd !important;
+	background-color: white !important;
+	box-shadow: 0 0 5px #ddd;
 }
 
 

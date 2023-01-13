@@ -4423,7 +4423,8 @@ ul,li{
 }
 
 .bg-blog{
-	background-color: #ddd !important;
+	background-color: white !important;
+	box-shadow: 0 0 5px #ddd;
 }
 .app__blog .bg-blog {
     background-color: #f1f1f1;
